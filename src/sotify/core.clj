@@ -1,6 +1,8 @@
-(ns sotify.core)
+(ns sotify.core
+  (:gen-class))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(set! *warn-on-reflection* true)
+
+(defn -main
+  [& args]
+  (println "Hello World"))
