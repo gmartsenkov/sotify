@@ -1,10 +1,18 @@
 # sotify
-
-A Clojure library designed to ... well, that part is up to you.
+Client tool for sending slack messages via incoming webhooks.
 
 ## Usage
 
-FIXME
+``` sh
+Slack notification tool.
+Usage: sotify -u http://slack.hook -m "Custom message" 
+
+Options:
+  -u, --url URL          Slack webhook url
+  -m, --message MESSAGE  A custom message
+  -c, --channel CHANNEL  Slack channel, example: #channel or @username
+  -h, --help
+```
 
 ## License
 
