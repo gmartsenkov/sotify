@@ -5,6 +5,7 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.2-alpha1"]
                  [cheshire "5.8.1"]
+                 [org.clojure/tools.cli "1.0.206"]
                  [org.martinklepsch/clj-http-lite "0.4.3"]]
   :main sotify.core
   :profiles {:uberjar {:aot :all}
@@ -14,6 +15,7 @@
    ["shell"
     "native-image" "--report-unsupported-elements-at-runtime"
     "--initialize-at-build-time" "--no-server"
+    "--enable-url-protocols=https"
     "-jar" "./target/${:uberjar-name:-${:name}-${:version}-standalone.jar}"
     "-H:Name=./target/${:name}"]}
   :repl-options {:init-ns sotify.core})
