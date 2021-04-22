@@ -14,6 +14,14 @@ Options:
   -h, --help
 ```
 
+## Build
+Install the [asdf version manager](https://asdf-vm.com/#/core-manage-asdf?id=install), add the `java`, `clojure` and `lein` plugins and run `asdf install` which will install the correct versions from the `.tool-versions` file.
+Run `gu install native-image`, you need to make sure that the `native-image` binary is in your $PATH or alternatively create an alias like this:
+``` sh
+alias native-image="~/.asdf/installs/java/graalvm-21.1.0+java16/bin/native-image"
+```
+Run the `./build` script which will build the CLI into a binary in `./targets`
+
 ## License
 
 Copyright © 2021 FIXME
