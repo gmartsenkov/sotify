@@ -16,9 +16,9 @@ Options:
 
 ## Build
 Install the [asdf version manager](https://asdf-vm.com/#/core-manage-asdf?id=install), add the `java`, `clojure` and `lein` plugins and run `asdf install` which will install the correct versions from the `.tool-versions` file.
-Run `gu install native-image`, you need to make sure that the `native-image` binary is in your $PATH or alternatively create an alias like this:
+In order to compile into a binary using GraalVM we are going to make use of docker to compile to a linux binary.
 ``` sh
-alias native-image="~/.asdf/installs/java/graalvm-21.1.0+java16/bin/native-image"
+sudo docker build . -t graal
 ```
 Run the `./build` script which will build the CLI into a binary in `./targets`
 

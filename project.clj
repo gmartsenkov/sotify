@@ -8,14 +8,5 @@
                  [org.clojure/tools.cli "1.0.206"]
                  [org.martinklepsch/clj-http-lite "0.4.3"]]
   :main sotify.core
-  :profiles {:uberjar {:aot :all}
-             :dev {:plugins [[lein-shell "0.5.0"]]}}
-  :aliases
-  {"native"
-   ["shell"
-    "native-image" "--report-unsupported-elements-at-runtime"
-    "--initialize-at-build-time" "--no-server"
-    "--enable-url-protocols=https"
-    "-jar" "./target/${:uberjar-name:-${:name}-${:version}-standalone.jar}"
-    "-H:Name=./target/${:name}"]}
+  :profiles {:uberjar {:aot :all}}
   :repl-options {:init-ns sotify.core})
