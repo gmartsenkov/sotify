@@ -1,5 +1,5 @@
 # sotify
-Client tool for sending slack messages via incoming webhooks.
+CLI tool for sending slack messages via incoming webhooks.
 
 ## Usage
 
